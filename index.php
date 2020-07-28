@@ -132,8 +132,40 @@ require_once 'ArrayAvgHelper.php';
 // echo $programmer->getName() . '<br>';
 // echo $programmer->getLangs();
 
-$driver = new Driver;
-$driver->setDrivingExperience(25);
-$driver->setDrivingCategory('B');
-echo 'Водительский стаж: ' . $driver->getDrivingExperience() . '<br>';
-echo 'Категория вождения: ' . $driver->getDrivingCategory() . '<br>';
+// $driver = new Driver;
+// $driver->setDrivingExperience(25);
+// $driver->setDrivingCategory('B');
+// echo 'Водительский стаж: ' . $driver->getDrivingExperience() . '<br>';
+// echo 'Категория вождения: ' . $driver->getDrivingCategory() . '<br>';
+
+// $student = new Student;
+// $student->setName('Георгий');
+// $student->setCourse(2);
+// $student->setAge(20);
+// echo 'Имя студента: ' . $student->getName() . '<br>';
+// echo 'Возраст: ' . $student->getAge() . '<br>';
+// echo 'Курс: ' . $student->getCourse() . '<br>';
+// $student->addOneYear();
+// echo 'Возраст: ' . $student->getAge() . '<br>';
+
+// $student = new Student;
+// $student->setName('Иван');
+// echo $student->getName();
+
+// $student = new Student('Иванов', 'Иван', 'Иванович', '1983-08-13', 1);
+// echo 'Фамилия студента: ' . $student->getSurname() . '<br>';
+// echo 'Имя студента: ' . $student->getName() . '<br>';
+// echo 'Отчество студента: ' . $student->getPatronymic() . '<br>';
+// echo 'Возраст студента: ' . $student->getAge() . '<br>';
+// echo 'Курс: ' . $student->getCourse();
+
+$employee = new Employee('Иванов', 'Иван', 'Иванович', '1978-03-15', 25000);
+echo 'Фамилия работника: ' . $employee->getSurname();
+echo '<br>';
+echo 'Имя работника: ' . $employee->getName();
+echo '<br>';
+echo 'Отчество работника: ' . $employee->getPatronymic();
+echo '<br>';
+echo 'Возраст работника: ' . $employee->getAge();
+echo '<br>';
+echo 'Заработная плата работника: ' . $employee->getSalary();

@@ -2,13 +2,13 @@
 
 class Student extends User
 {
-    public $course = 1;
+    private $course;
 
-    // public function __construct($name) 
-    // {
-    //     $this->name = $name;
-    //     $this->course = 1;
-    // }
+    public function __construct($surname, $name, $patronymic, $birthday, $course) 
+    {
+        parent::__construct($surname, $name, $patronymic, $birthday);
+        $this->course = $course;
+    }
 
     public function getCourse()
     {
@@ -18,6 +18,16 @@ class Student extends User
     public function setCourse($course)
     {
         $this->course = $course;
+    }
+
+    public function setName($name)
+    {
+        if(mb_strlen($name) < 10) parent::setName($name);
+    }
+
+    public function addOneYear()
+    {
+        $this->age++;
     }
 
     public function transferToNextCourse() 
