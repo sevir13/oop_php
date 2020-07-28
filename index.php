@@ -10,6 +10,7 @@ require_once 'City.php';
 require_once 'Arr.php';
 require_once 'ArraySumHelper.php';
 require_once 'ArrayAvgHelper.php';
+require_once 'Product.php';
 
 // $employee = new Employee;
 // $employee->salary = 10000;
@@ -159,13 +160,22 @@ require_once 'ArrayAvgHelper.php';
 // echo 'Возраст студента: ' . $student->getAge() . '<br>';
 // echo 'Курс: ' . $student->getCourse();
 
-$employee = new Employee('Иванов', 'Иван', 'Иванович', '1978-03-15', 25000);
-echo 'Фамилия работника: ' . $employee->getSurname();
-echo '<br>';
-echo 'Имя работника: ' . $employee->getName();
-echo '<br>';
-echo 'Отчество работника: ' . $employee->getPatronymic();
-echo '<br>';
-echo 'Возраст работника: ' . $employee->getAge();
-echo '<br>';
-echo 'Заработная плата работника: ' . $employee->getSalary();
+// $employee = new Employee('Иванов', 'Иван', 'Иванович', '1978-03-15', 25000);
+// echo 'Фамилия работника: ' . $employee->getSurname();
+// echo '<br>';
+// echo 'Имя работника: ' . $employee->getName();
+// echo '<br>';
+// echo 'Отчество работника: ' . $employee->getPatronymic();
+// echo '<br>';
+// echo 'Возраст работника: ' . $employee->getAge();
+// echo '<br>';
+// echo 'Заработная плата работника: ' . $employee->getSalary();
+
+// $product1 = new Product('Батон', 20);
+// $product2 = $product1;
+// echo $product2->getName() . '<br>';
+// $product2->setName('Ржаной');
+// echo $product1->getName() . '<br>';
+// $product2->setPrice(25);
+// echo 'Стоимость товара: ' . $product1->getPrice() . ' руб.';
+
