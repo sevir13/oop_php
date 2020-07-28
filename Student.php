@@ -1,24 +1,23 @@
 <?php
 
-class Student
+class Student extends User
 {
-    public $name;
-    private $course;
+    public $course = 1;
 
-    public function __construct($name) 
-    {
-        $this->name = $name;
-        $this->course = 1;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
+    // public function __construct($name) 
+    // {
+    //     $this->name = $name;
+    //     $this->course = 1;
+    // }
 
     public function getCourse()
     {
         return $this->course;
+    }
+
+    public function setCourse($course)
+    {
+        $this->course = $course;
     }
 
     public function transferToNextCourse() 

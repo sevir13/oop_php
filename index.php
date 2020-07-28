@@ -1,9 +1,9 @@
 <?php
 
-require_once 'Employee.php';
 require_once 'User.php';
-require_once 'Rectangle.php';
+require_once 'Employee.php';
 require_once 'Student.php';
+require_once 'Rectangle.php';
 require_once 'City.php';
 require_once 'Arr.php';
 require_once 'ArraySumHelper.php';
@@ -103,3 +103,13 @@ require_once 'ArrayAvgHelper.php';
 
 // $obj = new ArrayAvgHelper;
 // echo $obj->getAvg4([5, 6, 5]);
+
+// $employee = new Employee;
+// $employee->setName('Иван');
+// $employee->setAge(25);
+// $employee->setSalary(25000);
+// echo $employee->getName();
+// echo '<br>';
+// echo $employee->getAge();
+// echo '<br>';
+// echo $employee->getSalary();
