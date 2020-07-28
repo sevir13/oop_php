@@ -7,8 +7,9 @@ require_once 'Programmer.php';
 require_once 'Driver.php';
 require_once 'Rectangle.php';
 require_once 'City.php';
+require_once 'AvgHelper.php';
 require_once 'Arr.php';
-require_once 'ArraySumHelper.php';
+require_once 'SumHelper.php';
 require_once 'ArrayAvgHelper.php';
 require_once 'Product.php';
 
@@ -179,3 +180,11 @@ require_once 'Product.php';
 // $product2->setPrice(25);
 // echo 'Стоимость товара: ' . $product1->getPrice() . ' руб.';
 
+// $arr = new AvgHelper;
+// echo $arr->getAvg([3,6,9]);
+// echo '<br>';
+// echo $arr->getMeanSquare([3,6,9]);
+// echo '<br>';
+// $arr1 = new Arr;
+// $arr1->set([3,6,9]);
+// echo $arr1->getAvgMeanSum();
