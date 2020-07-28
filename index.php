@@ -4,6 +4,7 @@ require_once 'User.php';
 require_once 'Employee.php';
 require_once 'Student.php';
 require_once 'Programmer.php';
+require_once 'Driver.php';
 require_once 'Rectangle.php';
 require_once 'City.php';
 require_once 'Arr.php';
@@ -125,8 +126,14 @@ require_once 'ArrayAvgHelper.php';
 // echo '<br>';
 // echo $student->getCourse();
 
-$programmer = new Programmer;
-$programmer->setName('Михаил');
-$programmer->setLangs(['PHP', 'JavaScript']);
-echo $programmer->getName() . '<br>';
-echo $programmer->getLangs();
+// $programmer = new Programmer;
+// $programmer->setName('Михаил');
+// $programmer->setLangs(['PHP', 'JavaScript']);
+// echo $programmer->getName() . '<br>';
+// echo $programmer->getLangs();
+
+$driver = new Driver;
+$driver->setDrivingExperience(25);
+$driver->setDrivingCategory('B');
+echo 'Водительский стаж: ' . $driver->getDrivingExperience() . '<br>';
+echo 'Категория вождения: ' . $driver->getDrivingCategory() . '<br>';
