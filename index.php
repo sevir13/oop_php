@@ -2,6 +2,7 @@
 
 require_once 'User.php';
 require_once 'Employee.php';
+require_once 'EmployeesCollection.php';
 require_once 'Student.php';
 require_once 'Programmer.php';
 require_once 'Driver.php';
@@ -190,20 +191,42 @@ require_once 'Cart.php';
 // $arr1->set([3,6,9]);
 // echo $arr1->getAvgMeanSum();
 
-$cart = new Cart;
-$cart->add(new Product('Батон', 25, 2));
-$cart->add(new Product('Ржаной', 27, 3));
-$cart->add(new Product('Серый', 30, 5));
-foreach($cart->getCart() as $key => $value) {
-    echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
-}
-echo $cart->getTotalCost() . '<br>';
-echo $cart->getTotalQuantity() . '<br>';
-echo $cart->getAvgPrice() . '<br>';
-$cart->remove('Ржаной');
-foreach($cart->getCart() as $key => $value) {
-    echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
-}
-echo $cart->getTotalCost() . '<br>';
-echo $cart->getTotalQuantity() . '<br>';
-echo $cart->getAvgPrice() . '<br>';
+// $cart = new Cart;
+// $cart->add(new Product('Батон', 25, 2));
+// $cart->add(new Product('Ржаной', 27, 3));
+// $cart->add(new Product('Серый', 30, 5));
+// foreach($cart->getCart() as $key => $value) {
+//     echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
+// }
+// echo $cart->getTotalCost() . '<br>';
+// echo $cart->getTotalQuantity() . '<br>';
+// echo $cart->getAvgPrice() . '<br>';
+// $cart->remove('Ржаной');
+// foreach($cart->getCart() as $key => $value) {
+//     echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
+// }
+// echo $cart->getTotalCost() . '<br>';
+// echo $cart->getTotalQuantity() . '<br>';
+// echo $cart->getAvgPrice() . '<br>';
+
+// function compare($object1, $object2)
+// {
+//     if($object1 === $object2) {
+//         return 1;
+//     } elseif($object1 == $object2) {
+//         return 0;
+//     } else {
+//         return -1;
+//     }
+// }
+
+// $user1 = new User('Иванов', 'Иван', 'Иванович', '1982-01-05');
+// $user2 = new User('Иванов', 'Иван', 'Иванович', '1982-05-05');
+// echo compare($user1, $user2);
+
+// $employeeCollection = new EmployeesCollection;
+// $employeeCollection->add(new Employee('Иванов', 'Иван', 'Иванович', '1975-05-04', 25000));
+// $employeeCollection->add(new Employee('Петров', 'Иван', 'Петрович', '1975-05-04', 30000));
+// $employeeCollection->add(new Employee('Иванов', 'Иван', 'Иванович', '1975-05-04', 25000));
+// echo '<pre>';
+// echo var_dump($employeeCollection->get());
