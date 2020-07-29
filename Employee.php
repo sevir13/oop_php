@@ -12,7 +12,7 @@ class Employee extends User
 
     function getSalary()
     {
-        return $this->salary . '$';
+        return $this->salary;
     }
 
     public function setSalary($salary)

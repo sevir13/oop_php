@@ -3,11 +3,13 @@
 class Student extends User
 {
     private $course;
+    private $scholarship;
 
-    public function __construct($surname, $name, $patronymic, $birthday, $course) 
+    public function __construct($surname, $name, $patronymic, $birthday, $course, $scholarship) 
     {
         parent::__construct($surname, $name, $patronymic, $birthday);
         $this->course = $course;
+        $this->scholarship = $scholarship;
     }
 
     public function getCourse()
@@ -15,9 +17,19 @@ class Student extends User
         return $this->course;
     }
 
+    public function getScholarship()
+    {
+        return $this->scholarship;
+    }
+
     public function setCourse($course)
     {
         $this->course = $course;
+    }
+
+    public function setScholarship($scholarship)
+    {
+        $this->scholarship = $scholarship;
     }
 
     public function setName($name)

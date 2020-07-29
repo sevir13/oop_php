@@ -4,6 +4,7 @@ require_once 'User.php';
 require_once 'Employee.php';
 require_once 'EmployeesCollection.php';
 require_once 'Student.php';
+require_once 'UsersCollection.php';
 require_once 'Programmer.php';
 require_once 'Driver.php';
 require_once 'Rectangle.php';
@@ -230,3 +231,62 @@ require_once 'Cart.php';
 // $employeeCollection->add(new Employee('Иванов', 'Иван', 'Иванович', '1975-05-04', 25000));
 // echo '<pre>';
 // echo var_dump($employeeCollection->get());
+
+// $employee1 = new Employee('Иванов', 'Александр', 'Иванович', '1975-05-05', 25000);
+// $employee2 = new Employee('Петров', 'Богдан', 'Иванович', '1975-05-05', 30000);
+// $employee3 = new Employee('Сидоров', 'Владимир', 'Иванович', '1975-05-05', 45000);
+
+// $student1 = new Student('Иванов', 'Алексей', 'Петрович', '1977-05-08', 1, 5000);
+// $student2 = new Student('Петров', 'Георгий', 'Петрович', '1977-05-08', 1, 7000);
+// $student3 = new Student('Сидоров', 'Дмитрий', 'Петрович', '1977-05-08', 1, 10000);
+
+// $arr = [$student3, $employee1, $employee2, $student1, $employee3, $student2];
+// $sumSalary = 0;
+// $sumScholarship = 0;
+
+// foreach($arr as $value) {
+    
+//     if($value instanceof Employee) {
+//         echo 'Имя работника: ' . $value->getName() . '<br>';
+//         $sumSalary += $value->getSalary();
+//     }
+// }
+// foreach($arr as $value) {
+//     if($value instanceof Student) {
+//         echo 'Имя студента: ' . $value->getName() . '<br>';
+//         $sumScholarship += $value->getScholarship();
+//     }
+// }
+
+// echo 'Сумма зарплат работников: ' . $sumSalary . ' руб.<br>';
+// echo 'Сумма стипендий студентов: ' . $sumScholarship . ' руб.<br>';
+
+// $user1 = new User('Сидоров', 'Иван', 'Петрович', '1974-05-06');
+// $user2 = new User('Ефимов', 'Богдан', 'Иванович', '1975-05-06');
+// $user3 = new User('Трофимов', 'Ефим', 'Богданович', '1976-05-06');
+
+// $employee1 = new Employee('Иванов', 'Александр', 'Иванович', '1975-05-05', 25000);
+// $employee2 = new Employee('Петров', 'Богдан', 'Иванович', '1975-05-05', 30000);
+// $employee3 = new Employee('Сидоров', 'Владимир', 'Иванович', '1975-05-05', 45000);
+
+// $city1 = new City('Москва', '1147', 11920000);
+// $city2 = new City('Санкт-Петербург', '1703', 4991000);
+// $city3 = new City('Чебоксары', '1469', 462669);
+
+// $arr = [$user1, $employee3, $user3, $city2, $employee1, $user2, $city3, $city1, $employee2];
+
+// foreach($arr as $value) {
+//     if(!$value instanceof Employee && !$value instanceof City) echo $value->getName() . '<br>';
+// }
+
+$usersCollection = new UsersCollection;
+$usersCollection->add(new Employee('Иванов', 'Александр', 'Иванович', '1975-05-05', 25000));
+$usersCollection->add(new Employee('Петров', 'Богдан', 'Иванович', '1975-05-05', 30000));
+$usersCollection->add(new Employee('Сидоров', 'Владимир', 'Иванович', '1975-05-05', 15000));
+$usersCollection->add(new Student('Иванов', 'Алексей', 'Петрович', '1977-05-08', 1, 5000));
+$usersCollection->add(new Student('Иванов', 'Алексей', 'Петрович', '1977-05-08', 1, 5000));
+$usersCollection->add(new Student('Сидоров', 'Дмитрий', 'Петрович', '1977-05-08', 1, 10000));
+
+echo 'Полная сумма зарплат: ' . $usersCollection->getTotalSalary() . '<br>';
+echo 'Полная сумма стипендий: ' . $usersCollection->getTotalScholarship() . '<br>';
+echo 'Полная сумма платежей: ' . $usersCollection->getTotalPayment() . '<br>';
