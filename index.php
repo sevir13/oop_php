@@ -12,6 +12,7 @@ require_once 'Arr.php';
 require_once 'SumHelper.php';
 require_once 'ArrayAvgHelper.php';
 require_once 'Product.php';
+require_once 'Cart.php';
 
 // $employee = new Employee;
 // $employee->salary = 10000;
@@ -188,3 +189,21 @@ require_once 'Product.php';
 // $arr1 = new Arr;
 // $arr1->set([3,6,9]);
 // echo $arr1->getAvgMeanSum();
+
+$cart = new Cart;
+$cart->add(new Product('Батон', 25, 2));
+$cart->add(new Product('Ржаной', 27, 3));
+$cart->add(new Product('Серый', 30, 5));
+foreach($cart->getCart() as $key => $value) {
+    echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
+}
+echo $cart->getTotalCost() . '<br>';
+echo $cart->getTotalQuantity() . '<br>';
+echo $cart->getAvgPrice() . '<br>';
+$cart->remove('Ржаной');
+foreach($cart->getCart() as $key => $value) {
+    echo ++$key . '. ' . $value['name'] . ' - ' . $value['price'] . ' руб. - ' . $value['quantity'] . ' шт.<br>';
+}
+echo $cart->getTotalCost() . '<br>';
+echo $cart->getTotalQuantity() . '<br>';
+echo $cart->getAvgPrice() . '<br>';
